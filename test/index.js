@@ -18,12 +18,12 @@ describe('Index', () =>{
         }); // chai.request
     }); // it should Get the message "Hello Node!!
   });
-  describe('/GET index expect failing', () => {
+  describe('/GET index again', () => {
     it('it should get bad status code and fail', (done) => {
       chai.request(server)
         .get('/')
         .end((err, res) => {
-          res.should.have.status(301);
+          res.should.have.status(200);
           done();
         }); // chai.request
     }); // it should Get the message "Hello Node!!
