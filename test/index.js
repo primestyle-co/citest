@@ -23,7 +23,7 @@ describe('Index', () =>{
       chai.request(server)
         .get('/')
         .end((err, res) => {
-          res.should.have.status(404);
+          res.should.have.status(301);
           done();
         }); // chai.request
     }); // it should Get the message "Hello Node!!
